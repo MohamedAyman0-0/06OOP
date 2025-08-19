@@ -32,7 +32,68 @@ public class Point3D
     }
 }
 #endregion
-#region
+#region 3. 
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter coordinates for Point P1:");
+        Point3D P1 = ReadPoint();
+
+        Console.WriteLine("\nEnter coordinates for Point P2:");
+        Point3D P2 = ReadPoint();
+
+        Console.WriteLine($"\nP1: {P1}");
+        Console.WriteLine($"P2: {P2}");
+    }
+
+
+    static Point3D ReadPoint()
+    {
+        int x = ReadInt("X");
+        int y = ReadInt("Y");
+        int z = ReadInt("Z");
+
+        return new Point3D(x, y, z);
+    }
+
+    static int ReadInt(string coordName)
+    {
+        int value;
+
+        while (true)
+        {
+            Console.Write($"Enter {coordName}: ");
+            string input = Console.ReadLine();
+
+         
+            if (int.TryParse(input, out value))
+                return value;
+
+          
+            try
+            {
+                value = int.Parse(input);
+                return value;
+            }
+            catch
+            {
+                Console.WriteLine("Parse failed!");
+            }
+
+        
+            try
+            {
+                value = Convert.ToInt32(input);
+                return value;
+            }
+            catch
+            {
+                Console.WriteLine("Convert failed! Please enter a valid integer.");
+            }
+        }
+    }
+}
 #endregion
 #region
 #endregion
