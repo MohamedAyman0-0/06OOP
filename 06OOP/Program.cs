@@ -1,5 +1,5 @@
 ﻿#region first project
-//#region 1.
+#region 1.
 //public class Point3D
 //{
 //    public int X { get; set; }
@@ -24,15 +24,15 @@
 //    }
 
 
-//#endregion
-//#region 2.
+#endregion
+#region 2.
 //  public override string ToString()
 //    {
 //        return $"Point Coordinates: ({X}, {Y}, {Z})";
 //    }
 //}
-//#endregion
-//#region 3. 
+#endregion
+#region 3. 
 //class Program
 //{
 //    static void Main(string[] args)
@@ -95,99 +95,99 @@
 //    }
 //}
 
-//#endregion
+#endregion
 #region 4. 
-using System;
+//using System;
 
-public class Point3D : IComparable<Point3D>
-{
-    public int X { get; set; }
-    public int Y { get; set; }
-    public int Z { get; set; }
+//public class Point3D : IComparable<Point3D>
+//{
+//    public int X { get; set; }
+//    public int Y { get; set; }
+//    public int Z { get; set; }
 
-    public Point3D(int x, int y, int z)
-    {
-        X = x; Y = y; Z = z;
-    }
+//    public Point3D(int x, int y, int z)
+//    {
+//        X = x; Y = y; Z = z;
+//    }
 
-    public override string ToString()
-    {
-        return $"Point Coordinates: ({X}, {Y}, {Z})";
-    }
+//    public override string ToString()
+//    {
+//        return $"Point Coordinates: ({X}, {Y}, {Z})";
+//    }
 
-    public override bool Equals(object obj)
-    {
-        if (obj is Point3D other)
-            return X == other.X && Y == other.Y && Z == other.Z;
-        return false;
-    }
+//    public override bool Equals(object obj)
+//    {
+//        if (obj is Point3D other)
+//            return X == other.X && Y == other.Y && Z == other.Z;
+//        return false;
+//    }
 
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(X, Y, Z);
-    }
+//    public override int GetHashCode()
+//    {
+//        return HashCode.Combine(X, Y, Z);
+//    }
 
-  
-    public static bool operator ==(Point3D p1, Point3D p2)
-    {
-        if (ReferenceEquals(p1, null) && ReferenceEquals(p2, null))
-            return true;
-        if (ReferenceEquals(p1, null) || ReferenceEquals(p2, null))
-            return false;
-        return p1.Equals(p2);
-    }
 
-    public static bool operator !=(Point3D p1, Point3D p2)
-    {
-        return !(p1 == p2);
-    }
+//    public static bool operator ==(Point3D p1, Point3D p2)
+//    {
+//        if (ReferenceEquals(p1, null) && ReferenceEquals(p2, null))
+//            return true;
+//        if (ReferenceEquals(p1, null) || ReferenceEquals(p2, null))
+//            return false;
+//        return p1.Equals(p2);
+//    }
 
- 
-    public int CompareTo(Point3D other)
-    {
-        if (X == other.X)
-            return Y.CompareTo(other.Y);
-        return X.CompareTo(other.X);
-    }
-}
+//    public static bool operator !=(Point3D p1, Point3D p2)
+//    {
+//        return !(p1 == p2);
+//    }
 
-class Program
-{
-    static void Main(string[] args)
-    {
-       
-        Point3D P1 = new Point3D(10, 20, 30);
-        Point3D P2 = new Point3D(10, 20, 30);
 
-        Console.WriteLine($"P1: {P1}");
-        Console.WriteLine($"P2: {P2}");
+//    public int CompareTo(Point3D other)
+//    {
+//        if (X == other.X)
+//            return Y.CompareTo(other.Y);
+//        return X.CompareTo(other.X);
+//    }
+//}
 
-        if (P1 == P2)
-            Console.WriteLine("P1 and P2 are Equal");
-        else
-            Console.WriteLine("P1 and P2 are NOT Equal");
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
 
-   
-        Point3D[] points = {
-            new Point3D(3,5,1),
-            new Point3D(1,2,4),
-            new Point3D(1,1,0),
-            new Point3D(2,3,3),
-            new Point3D(1,2,4) 
-        };
+//        Point3D P1 = new Point3D(10, 20, 30);
+//        Point3D P2 = new Point3D(10, 20, 30);
 
-        Array.Sort(points);
+//        Console.WriteLine($"P1: {P1}");
+//        Console.WriteLine($"P2: {P2}");
 
-        Console.WriteLine("\nSorted Points:");
-        foreach (var point in points)
-            Console.WriteLine(point);
-    }
-}
+//        if (P1 == P2)
+//            Console.WriteLine("P1 and P2 are Equal");
+//        else
+//            Console.WriteLine("P1 and P2 are NOT Equal");
+
+
+//        Point3D[] points = {
+//            new Point3D(3,5,1),
+//            new Point3D(1,2,4),
+//            new Point3D(1,1,0),
+//            new Point3D(2,3,3),
+//            new Point3D(1,2,4) 
+//        };
+
+//        Array.Sort(points);
+
+//        Console.WriteLine("\nSorted Points:");
+//        foreach (var point in points)
+//            Console.WriteLine(point);
+//    }
+//}
 
 
 
 #endregion
-//#region 5. 
+#region 5. 
 //using System;
 
 //public class Point3D : IComparable<Point3D>, ICloneable
@@ -316,5 +316,51 @@ class Program
 //        }
 //    }
 //}
-//#endregion
+#endregion
+#endregion
+#region  second project
+using System;
+
+public class Maths
+{
+   
+    public static int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public static int Subtract(int a, int b)
+    {
+        return a - b;
+    }
+
+    public static int Multiply(int a, int b)
+    {
+        return a * b;
+    }
+
+    public static double Divide(double a, double b)
+    {
+        if (b == 0)
+        {
+            Console.WriteLine("Error: Division by zero!");
+            return double.NaN;
+        }
+        return a / b;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int x = 20, y = 10;
+
+        Console.WriteLine($"Add: {Maths.Add(x, y)}");
+        Console.WriteLine($"Subtract: {Maths.Subtract(x, y)}");
+        Console.WriteLine($"Multiply: {Maths.Multiply(x, y)}");
+        Console.WriteLine($"Divide: {Maths.Divide(x, y)}");
+    }
+}
+
 #endregion
