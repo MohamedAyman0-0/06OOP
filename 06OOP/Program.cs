@@ -22,10 +22,15 @@ public class Point3D
         Y = y;
         Z = z;
     }
-}
+
 
 #endregion
 #region 2.
+  public override string ToString()
+    {
+        return $"Point Coordinates: ({X}, {Y}, {Z})";
+    }
+}
 #endregion
 #region
 #endregion
